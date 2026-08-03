@@ -1,0 +1,13 @@
+{
+  "study_group": "insulin_dependent",
+  "n": 246,
+  "best_k": 3,
+  "ari_kmeans_vs_hier": 0.2523,
+  "target_cluster_kmeans": 2,
+  "target_cluster_hier": 1,
+  "target_cluster_kmeans_n": 13,
+  "with_cgm_n": 225,
+  "with_cgm_best_k": 2,
+  "cca_n": 225,
+  "cca_cc1": 0.5619
+}

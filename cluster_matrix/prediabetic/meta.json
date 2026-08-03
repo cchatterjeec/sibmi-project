@@ -1,0 +1,27 @@
+{
+  "study_group": "pre_diabetes_lifestyle_controlled",
+  "n": 546,
+  "method": "spectral (k-NN graph adjacency, RBF-weighted edges + normalized Laplacian + KMeans on top-k eigenvectors)",
+  "rbf_sigma": 0.9772,
+  "best_k": 2,
+  "silhouette_by_k": {
+    "2": 0.2199,
+    "3": 0.1911,
+    "4": 0.1647,
+    "5": 0.1709,
+    "6": 0.1756
+  },
+  "pca_variance_explained": [
+    0.4378,
+    0.2393,
+    0.1731
+  ],
+  "n_neighbors": 15,
+  "n_outliers_removed": 3,
+  "outlier_ids": [
+    1154,
+    1277,
+    4370
+  ],
+  "outlier_z_thresh": 4.0
+}

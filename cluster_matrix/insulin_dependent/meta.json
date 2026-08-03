@@ -1,0 +1,25 @@
+{
+  "study_group": "insulin_dependent",
+  "n": 245,
+  "method": "spectral (k-NN graph adjacency, RBF-weighted edges + normalized Laplacian + KMeans on top-k eigenvectors)",
+  "rbf_sigma": 1.3642,
+  "best_k": 2,
+  "silhouette_by_k": {
+    "2": 0.2056,
+    "3": 0.1751,
+    "4": 0.1988,
+    "5": 0.1769,
+    "6": 0.1582
+  },
+  "pca_variance_explained": [
+    0.376,
+    0.2233,
+    0.1916
+  ],
+  "n_neighbors": 15,
+  "n_outliers_removed": 1,
+  "outlier_ids": [
+    4588
+  ],
+  "outlier_z_thresh": 4.0
+}

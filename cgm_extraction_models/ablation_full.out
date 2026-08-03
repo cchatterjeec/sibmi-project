@@ -1,0 +1,219 @@
+============================================================
+Scenario: 1_baseline_no_glycemic
+  29 features: ['age', 'pulse_vsorres, Heart Rate (bpm)', 'bmi_vsorres, BMI', 'import_a_g_ratio, Albumin/Globulin ratio', 'import_globulin_total, Globulin [Mass/volume] in ', 'import_c_peptide, C peptide [Mass/volume] in Seru', 'import_calcium, Calcium [Mass/volume] in Serum or', 'import_chloride, Chloride [Moles/volume] in Serum', 'import_sodium, Sodium [Moles/volume] in Serum or ', 'import_potassium, Potassium [Moles/volume] in Ser', 'import_carbon_dioxide_total, Carbon dioxide, tota', 'import_creatinine, Creatinine [Mass/volume] in Se', 'import_buncreatinineratio, BUN/Creatinine ratio', 'import_urine_albumin, Albumin [Mass/volume] in Ur', 'import_urine_creatinine, Creatinine [Mass/volume]', 'import_alkaline_phosphatase, Alkaline phosphatase', 'import_alt_got, Alanine aminotransferase [Enzymat', 'import_ast_got, Aspartate aminotransferase [Enzym', 'import_bilirubin_total, Bilirubin.total [Mass/vol', 'import_crp_hs, C reactive protein [Mass/volume] i', 'import_nt_probnp, Natriuretic peptide.B prohormon', 'import_troponin_t, Troponin T.cardiac [Mass/volum', 'import_hdl_cholesterol, Cholesterol in HDL [Mass/', 'import_ldl_cholesterol, Cholesterol in LDL [Mass/', 'import_triglycerides, Triglyceride [Mass/volume] ', 'avg_daily_steps', 'avg_sleep_minutes', 'race', 'sex']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 549
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7156 (SE=0.0706)  MSE=0.2320
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.6220 (SE=0.0934)  MSE=0.3083
+
+--- Study group: healthy ---
+  n = 759
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 0.3}  R2=0.7409 (SE=0.0419)  MSE=0.4921
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 200, 'subsample': 1.0}  R2=0.6862 (SE=0.0462)  MSE=0.5960
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 663
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.6809 (SE=0.0541)  MSE=0.4621
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.7331 (SE=0.0633)  MSE=0.3865
+
+--- Study group: insulin_dependent ---
+  n = 246
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.0718 (SE=0.1655)  MSE=1.4403
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 300, 'subsample': 0.7}  R2=0.1553 (SE=0.1186)  MSE=1.3108
+
+Wrote scenario outputs to results_full/1_baseline_no_glycemic/
+============================================================
+Scenario: 2_add_tir
+  30 features: ['age', 'pulse_vsorres, Heart Rate (bpm)', 'bmi_vsorres, BMI', 'import_a_g_ratio, Albumin/Globulin ratio', 'import_globulin_total, Globulin [Mass/volume] in ', 'import_c_peptide, C peptide [Mass/volume] in Seru', 'import_calcium, Calcium [Mass/volume] in Serum or', 'import_chloride, Chloride [Moles/volume] in Serum', 'import_sodium, Sodium [Moles/volume] in Serum or ', 'import_potassium, Potassium [Moles/volume] in Ser', 'import_carbon_dioxide_total, Carbon dioxide, tota', 'import_creatinine, Creatinine [Mass/volume] in Se', 'import_buncreatinineratio, BUN/Creatinine ratio', 'import_urine_albumin, Albumin [Mass/volume] in Ur', 'import_urine_creatinine, Creatinine [Mass/volume]', 'import_alkaline_phosphatase, Alkaline phosphatase', 'import_alt_got, Alanine aminotransferase [Enzymat', 'import_ast_got, Aspartate aminotransferase [Enzym', 'import_bilirubin_total, Bilirubin.total [Mass/vol', 'import_crp_hs, C reactive protein [Mass/volume] i', 'import_nt_probnp, Natriuretic peptide.B prohormon', 'import_troponin_t, Troponin T.cardiac [Mass/volum', 'import_hdl_cholesterol, Cholesterol in HDL [Mass/', 'import_ldl_cholesterol, Cholesterol in LDL [Mass/', 'import_triglycerides, Triglyceride [Mass/volume] ', 'avg_daily_steps', 'avg_sleep_minutes', 'race', 'sex', 'tir']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 549
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7223 (SE=0.0679)  MSE=0.2265
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.6344 (SE=0.0869)  MSE=0.2981
+
+--- Study group: healthy ---
+  n = 759
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 0.3}  R2=0.7364 (SE=0.0422)  MSE=0.5006
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 200, 'subsample': 1.0}  R2=0.7016 (SE=0.0459)  MSE=0.5666
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 663
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.6811 (SE=0.0536)  MSE=0.4619
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 300, 'subsample': 0.7}  R2=0.7532 (SE=0.0451)  MSE=0.3575
+
+--- Study group: insulin_dependent ---
+  n = 246
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.0948 (SE=0.1602)  MSE=1.4047
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.7}  R2=0.1391 (SE=0.1112)  MSE=1.3360
+
+Wrote scenario outputs to results_full/2_add_tir/
+============================================================
+Scenario: 3_add_cv
+  30 features: ['age', 'pulse_vsorres, Heart Rate (bpm)', 'bmi_vsorres, BMI', 'import_a_g_ratio, Albumin/Globulin ratio', 'import_globulin_total, Globulin [Mass/volume] in ', 'import_c_peptide, C peptide [Mass/volume] in Seru', 'import_calcium, Calcium [Mass/volume] in Serum or', 'import_chloride, Chloride [Moles/volume] in Serum', 'import_sodium, Sodium [Moles/volume] in Serum or ', 'import_potassium, Potassium [Moles/volume] in Ser', 'import_carbon_dioxide_total, Carbon dioxide, tota', 'import_creatinine, Creatinine [Mass/volume] in Se', 'import_buncreatinineratio, BUN/Creatinine ratio', 'import_urine_albumin, Albumin [Mass/volume] in Ur', 'import_urine_creatinine, Creatinine [Mass/volume]', 'import_alkaline_phosphatase, Alkaline phosphatase', 'import_alt_got, Alanine aminotransferase [Enzymat', 'import_ast_got, Aspartate aminotransferase [Enzym', 'import_bilirubin_total, Bilirubin.total [Mass/vol', 'import_crp_hs, C reactive protein [Mass/volume] i', 'import_nt_probnp, Natriuretic peptide.B prohormon', 'import_troponin_t, Troponin T.cardiac [Mass/volum', 'import_hdl_cholesterol, Cholesterol in HDL [Mass/', 'import_ldl_cholesterol, Cholesterol in LDL [Mass/', 'import_triglycerides, Triglyceride [Mass/volume] ', 'avg_daily_steps', 'avg_sleep_minutes', 'race', 'sex', 'cv_glucose']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 549
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7121 (SE=0.0715)  MSE=0.2348
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.6255 (SE=0.0914)  MSE=0.3054
+
+--- Study group: healthy ---
+  n = 759
+  ElasticNet  best_params={'enet__alpha': 0.001, 'enet__l1_ratio': 1.0}  R2=0.7436 (SE=0.0427)  MSE=0.4869
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 200, 'subsample': 1.0}  R2=0.6991 (SE=0.0406)  MSE=0.5714
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 663
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.6809 (SE=0.0541)  MSE=0.4621
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.7529 (SE=0.0515)  MSE=0.3579
+
+--- Study group: insulin_dependent ---
+  n = 246
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.0873 (SE=0.1657)  MSE=1.4163
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 300, 'subsample': 0.7}  R2=0.1618 (SE=0.1326)  MSE=1.3007
+
+Wrote scenario outputs to results_full/3_add_cv/
+============================================================
+Scenario: 4_add_mean_of_nightly_means
+  30 features: ['age', 'pulse_vsorres, Heart Rate (bpm)', 'bmi_vsorres, BMI', 'import_a_g_ratio, Albumin/Globulin ratio', 'import_globulin_total, Globulin [Mass/volume] in ', 'import_c_peptide, C peptide [Mass/volume] in Seru', 'import_calcium, Calcium [Mass/volume] in Serum or', 'import_chloride, Chloride [Moles/volume] in Serum', 'import_sodium, Sodium [Moles/volume] in Serum or ', 'import_potassium, Potassium [Moles/volume] in Ser', 'import_carbon_dioxide_total, Carbon dioxide, tota', 'import_creatinine, Creatinine [Mass/volume] in Se', 'import_buncreatinineratio, BUN/Creatinine ratio', 'import_urine_albumin, Albumin [Mass/volume] in Ur', 'import_urine_creatinine, Creatinine [Mass/volume]', 'import_alkaline_phosphatase, Alkaline phosphatase', 'import_alt_got, Alanine aminotransferase [Enzymat', 'import_ast_got, Aspartate aminotransferase [Enzym', 'import_bilirubin_total, Bilirubin.total [Mass/vol', 'import_crp_hs, C reactive protein [Mass/volume] i', 'import_nt_probnp, Natriuretic peptide.B prohormon', 'import_troponin_t, Troponin T.cardiac [Mass/volum', 'import_hdl_cholesterol, Cholesterol in HDL [Mass/', 'import_ldl_cholesterol, Cholesterol in LDL [Mass/', 'import_triglycerides, Triglyceride [Mass/volume] ', 'avg_daily_steps', 'avg_sleep_minutes', 'race', 'sex', 'mean_of_nightly_means']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 540
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7135 (SE=0.0738)  MSE=0.2358
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.6478 (SE=0.0824)  MSE=0.2898
+
+--- Study group: healthy ---
+  n = 744
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7369 (SE=0.0422)  MSE=0.5098
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 1.0}  R2=0.6665 (SE=0.0545)  MSE=0.6462
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 660
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.6804 (SE=0.0554)  MSE=0.4653
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 300, 'subsample': 0.7}  R2=0.7211 (SE=0.0623)  MSE=0.4061
+
+--- Study group: insulin_dependent ---
+  n = 238
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.5}  R2=0.0737 (SE=0.1764)  MSE=1.4667
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.7}  R2=0.1019 (SE=0.1660)  MSE=1.4222
+
+Wrote scenario outputs to results_full/4_add_mean_of_nightly_means/
+============================================================
+Scenario: 5_add_mage
+  30 features: ['age', 'pulse_vsorres, Heart Rate (bpm)', 'bmi_vsorres, BMI', 'import_a_g_ratio, Albumin/Globulin ratio', 'import_globulin_total, Globulin [Mass/volume] in ', 'import_c_peptide, C peptide [Mass/volume] in Seru', 'import_calcium, Calcium [Mass/volume] in Serum or', 'import_chloride, Chloride [Moles/volume] in Serum', 'import_sodium, Sodium [Moles/volume] in Serum or ', 'import_potassium, Potassium [Moles/volume] in Ser', 'import_carbon_dioxide_total, Carbon dioxide, tota', 'import_creatinine, Creatinine [Mass/volume] in Se', 'import_buncreatinineratio, BUN/Creatinine ratio', 'import_urine_albumin, Albumin [Mass/volume] in Ur', 'import_urine_creatinine, Creatinine [Mass/volume]', 'import_alkaline_phosphatase, Alkaline phosphatase', 'import_alt_got, Alanine aminotransferase [Enzymat', 'import_ast_got, Aspartate aminotransferase [Enzym', 'import_bilirubin_total, Bilirubin.total [Mass/vol', 'import_crp_hs, C reactive protein [Mass/volume] i', 'import_nt_probnp, Natriuretic peptide.B prohormon', 'import_troponin_t, Troponin T.cardiac [Mass/volum', 'import_hdl_cholesterol, Cholesterol in HDL [Mass/', 'import_ldl_cholesterol, Cholesterol in LDL [Mass/', 'import_triglycerides, Triglyceride [Mass/volume] ', 'avg_daily_steps', 'avg_sleep_minutes', 'race', 'sex', 'mage']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 539
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7280 (SE=0.0687)  MSE=0.2259
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.6378 (SE=0.0818)  MSE=0.3007
+
+--- Study group: healthy ---
+  n = 743
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7350 (SE=0.0422)  MSE=0.5158
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.7056 (SE=0.0467)  MSE=0.5732
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 657
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.1}  R2=0.6744 (SE=0.0400)  MSE=0.4767
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 300, 'subsample': 0.7}  R2=0.7361 (SE=0.0521)  MSE=0.3863
+
+--- Study group: insulin_dependent ---
+  n = 234
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.1077 (SE=0.1771)  MSE=1.4130
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 300, 'subsample': 0.7}  R2=0.1848 (SE=0.1105)  MSE=1.2909
+
+Wrote scenario outputs to results_full/5_add_mage/
+============================================================
+Scenario: 6_add_modd
+  30 features: ['age', 'pulse_vsorres, Heart Rate (bpm)', 'bmi_vsorres, BMI', 'import_a_g_ratio, Albumin/Globulin ratio', 'import_globulin_total, Globulin [Mass/volume] in ', 'import_c_peptide, C peptide [Mass/volume] in Seru', 'import_calcium, Calcium [Mass/volume] in Serum or', 'import_chloride, Chloride [Moles/volume] in Serum', 'import_sodium, Sodium [Moles/volume] in Serum or ', 'import_potassium, Potassium [Moles/volume] in Ser', 'import_carbon_dioxide_total, Carbon dioxide, tota', 'import_creatinine, Creatinine [Mass/volume] in Se', 'import_buncreatinineratio, BUN/Creatinine ratio', 'import_urine_albumin, Albumin [Mass/volume] in Ur', 'import_urine_creatinine, Creatinine [Mass/volume]', 'import_alkaline_phosphatase, Alkaline phosphatase', 'import_alt_got, Alanine aminotransferase [Enzymat', 'import_ast_got, Aspartate aminotransferase [Enzym', 'import_bilirubin_total, Bilirubin.total [Mass/vol', 'import_crp_hs, C reactive protein [Mass/volume] i', 'import_nt_probnp, Natriuretic peptide.B prohormon', 'import_troponin_t, Troponin T.cardiac [Mass/volum', 'import_hdl_cholesterol, Cholesterol in HDL [Mass/', 'import_ldl_cholesterol, Cholesterol in LDL [Mass/', 'import_triglycerides, Triglyceride [Mass/volume] ', 'avg_daily_steps', 'avg_sleep_minutes', 'race', 'sex', 'modd']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 540
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7207 (SE=0.0712)  MSE=0.2298
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.6405 (SE=0.0815)  MSE=0.2958
+
+--- Study group: healthy ---
+  n = 742
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7339 (SE=0.0433)  MSE=0.5180
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 1.0}  R2=0.6462 (SE=0.0600)  MSE=0.6888
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 657
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.1}  R2=0.6747 (SE=0.0404)  MSE=0.4763
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 300, 'subsample': 0.7}  R2=0.7258 (SE=0.0485)  MSE=0.4015
+
+--- Study group: insulin_dependent ---
+  n = 234
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.1419 (SE=0.1684)  MSE=1.3792
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 300, 'subsample': 0.7}  R2=0.1829 (SE=0.1258)  MSE=1.3132
+
+Wrote scenario outputs to results_full/6_add_modd/
+============================================================
+Scenario: 7_add_import_glucose
+  30 features: ['age', 'pulse_vsorres, Heart Rate (bpm)', 'bmi_vsorres, BMI', 'import_a_g_ratio, Albumin/Globulin ratio', 'import_globulin_total, Globulin [Mass/volume] in ', 'import_c_peptide, C peptide [Mass/volume] in Seru', 'import_calcium, Calcium [Mass/volume] in Serum or', 'import_chloride, Chloride [Moles/volume] in Serum', 'import_sodium, Sodium [Moles/volume] in Serum or ', 'import_potassium, Potassium [Moles/volume] in Ser', 'import_carbon_dioxide_total, Carbon dioxide, tota', 'import_creatinine, Creatinine [Mass/volume] in Se', 'import_buncreatinineratio, BUN/Creatinine ratio', 'import_urine_albumin, Albumin [Mass/volume] in Ur', 'import_urine_creatinine, Creatinine [Mass/volume]', 'import_alkaline_phosphatase, Alkaline phosphatase', 'import_alt_got, Alanine aminotransferase [Enzymat', 'import_ast_got, Aspartate aminotransferase [Enzym', 'import_bilirubin_total, Bilirubin.total [Mass/vol', 'import_crp_hs, C reactive protein [Mass/volume] i', 'import_nt_probnp, Natriuretic peptide.B prohormon', 'import_troponin_t, Troponin T.cardiac [Mass/volum', 'import_hdl_cholesterol, Cholesterol in HDL [Mass/', 'import_ldl_cholesterol, Cholesterol in LDL [Mass/', 'import_triglycerides, Triglyceride [Mass/volume] ', 'avg_daily_steps', 'avg_sleep_minutes', 'race', 'sex', 'import_glucose, Glucose [Mass/volume] in Serum or']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 549
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7057 (SE=0.0781)  MSE=0.2400
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.6335 (SE=0.0906)  MSE=0.2988
+
+--- Study group: healthy ---
+  n = 759
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.7539 (SE=0.0446)  MSE=0.4674
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.7}  R2=0.6984 (SE=0.0530)  MSE=0.5728
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 663
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.6794 (SE=0.0549)  MSE=0.4643
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 300, 'subsample': 0.7}  R2=0.7402 (SE=0.0511)  MSE=0.3763
+
+--- Study group: insulin_dependent ---
+  n = 246
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.0861 (SE=0.1632)  MSE=1.4182
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 300, 'subsample': 0.7}  R2=0.1602 (SE=0.1257)  MSE=1.3033
+
+Wrote scenario outputs to results_full/7_add_import_glucose/
+
+============================================================
+All scenarios complete. Comparison table:
+============================================================
+                       scenario  ...   xgb_mse
+0        1_baseline_no_glycemic  ...  0.308274
+1        1_baseline_no_glycemic  ...  0.595974
+2        1_baseline_no_glycemic  ...  0.386516
+3        1_baseline_no_glycemic  ...  1.310827
+4                     2_add_tir  ...  0.298132
+5                     2_add_tir  ...  0.566639
+6                     2_add_tir  ...  0.357514
+7                     2_add_tir  ...  1.336028
+8                      3_add_cv  ...  0.305368
+9                      3_add_cv  ...  0.571403
+10                     3_add_cv  ...    0.3579
+11                     3_add_cv  ...  1.300689
+12  4_add_mean_of_nightly_means  ...  0.289751
+13  4_add_mean_of_nightly_means  ...  0.646195
+14  4_add_mean_of_nightly_means  ...  0.406052
+15  4_add_mean_of_nightly_means  ...  1.422171
+16                   5_add_mage  ...  0.300717
+17                   5_add_mage  ...  0.573162
+18                   5_add_mage  ...  0.386315
+19                   5_add_mage  ...  1.290859
+20                   6_add_modd  ...  0.295791
+21                   6_add_modd  ...  0.688789
+22                   6_add_modd  ...   0.40146
+23                   6_add_modd  ...  1.313221
+24         7_add_import_glucose  ...  0.298842
+25         7_add_import_glucose  ...  0.572761
+26         7_add_import_glucose  ...  0.376349
+27         7_add_import_glucose  ...   1.30326
+
+[28 rows x 9 columns]
+
+Full comparison written to results_full/ablation_comparison.csv

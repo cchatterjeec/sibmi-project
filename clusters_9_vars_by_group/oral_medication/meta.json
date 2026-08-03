@@ -1,0 +1,13 @@
+{
+  "study_group": "oral_medication_and_or_non_insulin_injectable_medication_controlled",
+  "n": 662,
+  "best_k": 4,
+  "ari_kmeans_vs_hier": 0.1376,
+  "target_cluster_kmeans": 3,
+  "target_cluster_hier": 1,
+  "target_cluster_kmeans_n": 22,
+  "with_cgm_n": 650,
+  "with_cgm_best_k": 3,
+  "cca_n": 650,
+  "cca_cc1": 0.4701
+}

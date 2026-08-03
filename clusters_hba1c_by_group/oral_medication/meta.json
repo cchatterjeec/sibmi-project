@@ -1,0 +1,17 @@
+{
+  "study_group": "oral_medication_and_or_non_insulin_injectable_medication_controlled",
+  "n": 663,
+  "best_k": 2,
+  "silhouette_by_k": {
+    "2": 0.2516,
+    "3": 0.2435,
+    "4": 0.2271,
+    "5": 0.2029,
+    "6": 0.2001
+  },
+  "pca_variance_explained": [
+    0.4006,
+    0.2441,
+    0.2022
+  ]
+}

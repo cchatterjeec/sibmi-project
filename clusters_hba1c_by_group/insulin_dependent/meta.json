@@ -1,0 +1,17 @@
+{
+  "study_group": "insulin_dependent",
+  "n": 246,
+  "best_k": 2,
+  "silhouette_by_k": {
+    "2": 0.2277,
+    "3": 0.2242,
+    "4": 0.2024,
+    "5": 0.2095,
+    "6": 0.1863
+  },
+  "pca_variance_explained": [
+    0.3744,
+    0.2215,
+    0.1943
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "study_group": "healthy",
+  "n": 759,
+  "best_k": 3,
+  "ari_kmeans_vs_hier": 0.4877,
+  "target_cluster_kmeans": 0,
+  "target_cluster_hier": 1,
+  "target_cluster_kmeans_n": 5,
+  "with_cgm_n": 741,
+  "with_cgm_best_k": 3,
+  "cca_n": 741,
+  "cca_cc1": 0.5079
+}

@@ -1,0 +1,129 @@
+============================================================
+Scenario: 1_no_glucose
+  4 features: ['age', 'bmi_vsorres, BMI', 'sex', 'race']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 549
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.0899 (SE=0.0552)  MSE=0.7422
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.0777 (SE=0.0385)  MSE=0.7521
+
+--- Study group: healthy ---
+  n = 759
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.1}  R2=0.0542 (SE=0.0347)  MSE=1.7962
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.0253 (SE=0.0252)  MSE=1.8510
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 663
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.7}  R2=0.1218 (SE=0.0235)  MSE=1.2719
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.0801 (SE=0.0390)  MSE=1.3323
+
+--- Study group: insulin_dependent ---
+  n = 246
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.7}  R2=0.0896 (SE=0.0854)  MSE=1.4128
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.1586 (SE=0.1770)  MSE=1.3058
+
+Wrote scenario outputs to ablation_results_minimal/1_no_glucose/
+============================================================
+Scenario: 2_cgm_only_remove_labs
+  6 features: ['age', 'bmi_vsorres, BMI', 'sex', 'race', 'tir', 'cv_glucose']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 549
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.7}  R2=0.0965 (SE=0.0504)  MSE=0.7368
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.0808 (SE=0.0440)  MSE=0.7496
+
+--- Study group: healthy ---
+  n = 759
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.0552 (SE=0.0285)  MSE=1.7943
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.0306 (SE=0.0210)  MSE=1.8410
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 663
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.7}  R2=0.1218 (SE=0.0235)  MSE=1.2719
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.1139 (SE=0.0473)  MSE=1.2834
+
+--- Study group: insulin_dependent ---
+  n = 246
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 1.0}  R2=0.1079 (SE=0.0742)  MSE=1.3843
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.7}  R2=0.1915 (SE=0.0992)  MSE=1.2546
+
+Wrote scenario outputs to ablation_results_minimal/2_cgm_only_remove_labs/
+============================================================
+Scenario: 3_labs_only_remove_cgm
+  6 features: ['age', 'bmi_vsorres, BMI', 'sex', 'race', 'import_glucose, Glucose [Mass/volume] in Serum or', 'import_hba1c, Hemoglobin A1c/Hemoglobin.total in ']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 549
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.0380 (SE=0.2828)  MSE=0.7845
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 300, 'subsample': 0.7}  R2=0.3198 (SE=0.0717)  MSE=0.5547
+
+--- Study group: healthy ---
+  n = 759
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 0.1}  R2=0.2372 (SE=0.0468)  MSE=1.4486
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 300, 'subsample': 0.7}  R2=0.3260 (SE=0.0527)  MSE=1.2799
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 663
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 1.0}  R2=0.2340 (SE=0.0543)  MSE=1.1094
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.7}  R2=0.3294 (SE=0.0893)  MSE=0.9713
+
+--- Study group: insulin_dependent ---
+  n = 246
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 1.0}  R2=0.0889 (SE=0.0782)  MSE=1.4139
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.1402 (SE=0.1491)  MSE=1.3343
+
+Wrote scenario outputs to ablation_results_minimal/3_labs_only_remove_cgm/
+============================================================
+Scenario: 4_labs_plus_cgm
+  8 features: ['age', 'bmi_vsorres, BMI', 'sex', 'race', 'import_glucose, Glucose [Mass/volume] in Serum or', 'import_hba1c, Hemoglobin A1c/Hemoglobin.total in ', 'tir', 'cv_glucose']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 549
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.0511 (SE=0.2392)  MSE=0.7738
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 300, 'subsample': 0.7}  R2=0.2611 (SE=0.0932)  MSE=0.6025
+
+--- Study group: healthy ---
+  n = 759
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 0.1}  R2=0.2427 (SE=0.0544)  MSE=1.4382
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 300, 'subsample': 0.7}  R2=0.3128 (SE=0.0495)  MSE=1.3050
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 663
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.1}  R2=0.2404 (SE=0.0451)  MSE=1.1002
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.7}  R2=0.2858 (SE=0.0724)  MSE=1.0344
+
+--- Study group: insulin_dependent ---
+  n = 246
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 1.0}  R2=0.0993 (SE=0.0764)  MSE=1.3977
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.1321 (SE=0.1107)  MSE=1.3468
+
+Wrote scenario outputs to ablation_results_minimal/4_labs_plus_cgm/
+
+============================================================
+All scenarios complete. Comparison table:
+============================================================
+                  scenario  ...   xgb_mse
+0             1_no_glucose  ...  0.752142
+1             1_no_glucose  ...  1.851041
+2             1_no_glucose  ...  1.332292
+3             1_no_glucose  ...  1.305788
+4   2_cgm_only_remove_labs  ...  0.749625
+5   2_cgm_only_remove_labs  ...  1.841044
+6   2_cgm_only_remove_labs  ...  1.283422
+7   2_cgm_only_remove_labs  ...  1.254615
+8   3_labs_only_remove_cgm  ...  0.554725
+9   3_labs_only_remove_cgm  ...  1.279936
+10  3_labs_only_remove_cgm  ...  0.971264
+11  3_labs_only_remove_cgm  ...  1.334345
+12         4_labs_plus_cgm  ...  0.602527
+13         4_labs_plus_cgm  ...  1.305028
+14         4_labs_plus_cgm  ...  1.034429
+15         4_labs_plus_cgm  ...  1.346765
+
+[16 rows x 9 columns]
+
+Full comparison written to ablation_results_minimal/ablation_comparison.csv

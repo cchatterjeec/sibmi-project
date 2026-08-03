@@ -1,0 +1,34 @@
+{
+  "study_group": "oral_medication_and_or_non_insulin_injectable_medication_controlled",
+  "n": 653,
+  "method": "spectral (k-NN graph adjacency, RBF-weighted edges + normalized Laplacian + KMeans on top-k eigenvectors)",
+  "rbf_sigma": 0.9953,
+  "best_k": 2,
+  "silhouette_by_k": {
+    "2": 0.2168,
+    "3": 0.1852,
+    "4": 0.1791,
+    "5": 0.1797,
+    "6": 0.1721
+  },
+  "pca_variance_explained": [
+    0.3993,
+    0.25,
+    0.1949
+  ],
+  "n_neighbors": 15,
+  "n_outliers_removed": 10,
+  "outlier_ids": [
+    1355,
+    1375,
+    4046,
+    4071,
+    4295,
+    7163,
+    7558,
+    7566,
+    7640,
+    7701
+  ],
+  "outlier_z_thresh": 4.0
+}

@@ -1,0 +1,183 @@
+Features: ['age', 'pulse_vsorres, Heart Rate (bpm)', 'bmi_vsorres, BMI', 'import_hba1c, Hemoglobin A1c/Hemoglobin.total in ', 'import_albumin, Albumin [Mass/volume] in Serum or', 'import_a_g_ratio, Albumin/Globulin ratio', 'import_globulin_total, Globulin [Mass/volume] in ', 'import_protein_total, Protein [Mass/volume] in Se', 'import_c_peptide, C peptide [Mass/volume] in Seru', 'import_calcium, Calcium [Mass/volume] in Serum or', 'import_chloride, Chloride [Moles/volume] in Serum', 'import_sodium, Sodium [Moles/volume] in Serum or ', 'import_potassium, Potassium [Moles/volume] in Ser', 'import_carbon_dioxide_total, Carbon dioxide, tota', 'import_creatinine, Creatinine [Mass/volume] in Se', 'import_bun, Urea nitrogen [Mass/volume] in Serum ', 'import_buncreatinineratio, BUN/Creatinine ratio', 'import_urine_albumin, Albumin [Mass/volume] in Ur', 'import_urine_creatinine, Creatinine [Mass/volume]', 'import_alkaline_phosphatase, Alkaline phosphatase', 'import_alt_got, Alanine aminotransferase [Enzymat', 'import_ast_got, Aspartate aminotransferase [Enzym', 'import_bilirubin_total, Bilirubin.total [Mass/vol', 'import_crp_hs, C reactive protein [Mass/volume] i', 'import_nt_probnp, Natriuretic peptide.B prohormon', 'import_troponin_t, Troponin T.cardiac [Mass/volum', 'import_total_cholesterol, Cholesterol [Mass/volum', 'import_hdl_cholesterol, Cholesterol in HDL [Mass/', 'import_ldl_cholesterol, Cholesterol in LDL [Mass/', 'import_triglycerides, Triglyceride [Mass/volume] ', 'avg_daily_steps', 'avg_sleep_minutes', 'cv_glucose', 'race', 'sex']
+
+==================================================
+Study Group: pre_diabetes_lifestyle_controlled
+==================================================
+
+Forward train->test (split-based)
+  R-squared: 0.6958296638878141
+  SE (bootstrap): 0.07792357224198664
+
+Standard 5-fold CV (train on other 4 folds -> predict held-out fold)
+  Fold 0: R2=0.8185  (n_test=88)
+  Fold 1: R2=0.8560  (n_test=88)
+  Fold 2: R2=0.8516  (n_test=88)
+  Fold 3: R2=0.5668  (n_test=88)
+  Fold 4: R2=0.7851  (n_test=87)
+  Pooled R2 (all held-out folds combined): 0.8129992543911575
+  Pooled SE (bootstrap): 0.025898568351818047
+
+Reverse 5-fold CV (train on 1 fold -> predict union of other 4 folds)
+  Fold 0 as context: R2=0.7861  (n_query=351)
+  Fold 1 as context: R2=0.7736  (n_query=351)
+  Fold 2 as context: R2=0.7254  (n_query=351)
+  Fold 3 as context: R2=0.6647  (n_query=351)
+  Fold 4 as context: R2=0.8293  (n_query=352)
+  Pooled R2 (all query-fold predictions combined): 0.7536609648656895
+  Pooled SE (bootstrap): 0.01485411904320057
+  [Saved partial results to tabfm_ablation_results/ after group "pre_diabetes_lifestyle_controlled"]
+
+==================================================
+Study Group: healthy
+==================================================
+
+Forward train->test (split-based)
+  R-squared: 0.8169726202569914
+  SE (bootstrap): 0.04455462193604555
+
+Standard 5-fold CV (train on other 4 folds -> predict held-out fold)
+  Fold 0: R2=0.7542  (n_test=122)
+  Fold 1: R2=0.8439  (n_test=122)
+  Fold 2: R2=0.8098  (n_test=121)
+  Fold 3: R2=0.7109  (n_test=121)
+  Fold 4: R2=0.8097  (n_test=121)
+  Pooled R2 (all held-out folds combined): 0.7824382651134496
+  Pooled SE (bootstrap): 0.03737423382788402
+
+Reverse 5-fold CV (train on 1 fold -> predict union of other 4 folds)
+  Fold 0 as context: R2=0.7645  (n_query=485)
+  Fold 1 as context: R2=0.6816  (n_query=485)
+  Fold 2 as context: R2=0.7258  (n_query=486)
+  Fold 3 as context: R2=0.7150  (n_query=486)
+  Fold 4 as context: R2=0.7353  (n_query=486)
+  Pooled R2 (all query-fold predictions combined): 0.725711408840699
+  Pooled SE (bootstrap): 0.0160328077079707
+  [Saved partial results to tabfm_ablation_results/ after group "healthy"]
+
+==================================================
+Study Group: oral_medication_and_or_non_insulin_injectable_medication_controlled
+==================================================
+
+Forward train->test (split-based)
+  R-squared: 0.8028441513228597
+  SE (bootstrap): 0.03601862467618077
+
+Standard 5-fold CV (train on other 4 folds -> predict held-out fold)
+  Fold 0: R2=0.7974  (n_test=106)
+  Fold 1: R2=0.6655  (n_test=106)
+  Fold 2: R2=0.5149  (n_test=106)
+  Fold 3: R2=0.8386  (n_test=106)
+  Fold 4: R2=0.7104  (n_test=106)
+  Pooled R2 (all held-out folds combined): 0.7344982348239149
+  Pooled SE (bootstrap): 0.03327980867593216
+
+Reverse 5-fold CV (train on 1 fold -> predict union of other 4 folds)
+  Fold 0 as context: R2=0.6541  (n_query=424)
+  Fold 1 as context: R2=0.6249  (n_query=424)
+  Fold 2 as context: R2=0.5196  (n_query=424)
+  Fold 3 as context: R2=0.7124  (n_query=424)
+  Fold 4 as context: R2=0.5461  (n_query=424)
+  Pooled R2 (all query-fold predictions combined): 0.611701224060403
+  Pooled SE (bootstrap): 0.022878627967253182
+  [Saved partial results to tabfm_ablation_results/ after group "oral_medication_and_or_non_insulin_injectable_medication_controlled"]
+
+==================================================
+Study Group: insulin_dependent
+==================================================
+
+Forward train->test (split-based)
+  R-squared: 0.12019675001678265
+  SE (bootstrap): 0.1592727297952818
+
+Standard 5-fold CV (train on other 4 folds -> predict held-out fold)
+  Fold 0: R2=0.4700  (n_test=40)
+  Fold 1: R2=-0.3247  (n_test=40)
+  Fold 2: R2=0.3302  (n_test=40)
+  Fold 3: R2=0.2941  (n_test=39)
+  Fold 4: R2=0.3974  (n_test=39)
+  Pooled R2 (all held-out folds combined): 0.31190120827266155
+  Pooled SE (bootstrap): 0.07839676280277882
+
+Reverse 5-fold CV (train on 1 fold -> predict union of other 4 folds)
+  Fold 0 as context: R2=0.2547  (n_query=158)
+  Fold 1 as context: R2=0.0809  (n_query=158)
+  Fold 2 as context: R2=0.2071  (n_query=158)
+  Fold 3 as context: R2=0.1457  (n_query=159)
+  Fold 4 as context: R2=0.2325  (n_query=159)
+  Pooled R2 (all query-fold predictions combined): 0.18590727544213215
+  Pooled SE (bootstrap): 0.027663424144439012
+  [Saved partial results to tabfm_ablation_results/ after group "insulin_dependent"]
+
+==================================================
+Summary
+==================================================
+                                                      n  ...                                 reverse_cv_fold_r2
+pre_diabetes_lifestyle_controlled                   549  ...  [0.7860537695602083, 0.7736009393797045, 0.725...
+healthy                                             759  ...  [0.764544612599022, 0.6816128353229067, 0.7258...
+oral_medication_and_or_non_insulin_injectable_m...  663  ...  [0.6540703634328948, 0.6248756050547069, 0.519...
+insulin_dependent                                   246  ...  [0.25467805267197285, 0.08085079671398654, 0.2...
+
+[4 rows x 11 columns]
+
+Prediction dataframe:
+   participant_id  ... pred_insulin_tabfm
+0            1029  ...           0.293434
+1            1034  ...           0.325768
+2            1038  ...           0.232809
+3            1044  ...           1.078532
+4            1049  ...           0.719832
+
+[5 rows x 5 columns]
+
+Per-fold R2 (both CV variants):
+                                          study_group  ...        r2
+0                   pre_diabetes_lifestyle_controlled  ...  0.818460
+1                   pre_diabetes_lifestyle_controlled  ...  0.856015
+2                   pre_diabetes_lifestyle_controlled  ...  0.851640
+3                   pre_diabetes_lifestyle_controlled  ...  0.566793
+4                   pre_diabetes_lifestyle_controlled  ...  0.785131
+5                   pre_diabetes_lifestyle_controlled  ...  0.786054
+6                   pre_diabetes_lifestyle_controlled  ...  0.773601
+7                   pre_diabetes_lifestyle_controlled  ...  0.725447
+8                   pre_diabetes_lifestyle_controlled  ...  0.664699
+9                   pre_diabetes_lifestyle_controlled  ...  0.829342
+10                                            healthy  ...  0.754151
+11                                            healthy  ...  0.843870
+12                                            healthy  ...  0.809759
+13                                            healthy  ...  0.710901
+14                                            healthy  ...  0.809745
+15                                            healthy  ...  0.764545
+16                                            healthy  ...  0.681613
+17                                            healthy  ...  0.725812
+18                                            healthy  ...  0.715019
+19                                            healthy  ...  0.735347
+20  oral_medication_and_or_non_insulin_injectable_...  ...  0.797376
+21  oral_medication_and_or_non_insulin_injectable_...  ...  0.665464
+22  oral_medication_and_or_non_insulin_injectable_...  ...  0.514930
+23  oral_medication_and_or_non_insulin_injectable_...  ...  0.838603
+24  oral_medication_and_or_non_insulin_injectable_...  ...  0.710370
+25  oral_medication_and_or_non_insulin_injectable_...  ...  0.654070
+26  oral_medication_and_or_non_insulin_injectable_...  ...  0.624876
+27  oral_medication_and_or_non_insulin_injectable_...  ...  0.519625
+28  oral_medication_and_or_non_insulin_injectable_...  ...  0.712360
+29  oral_medication_and_or_non_insulin_injectable_...  ...  0.546096
+30                                  insulin_dependent  ...  0.469990
+31                                  insulin_dependent  ... -0.324698
+32                                  insulin_dependent  ...  0.330219
+33                                  insulin_dependent  ...  0.294135
+34                                  insulin_dependent  ...  0.397379
+35                                  insulin_dependent  ...  0.254678
+36                                  insulin_dependent  ...  0.080851
+37                                  insulin_dependent  ...  0.207148
+38                                  insulin_dependent  ...  0.145672
+39                                  insulin_dependent  ...  0.232545
+
+[40 rows x 4 columns]
+
+==================================================
+Output files written to tabfm_ablation_results/:
+  - tabfm_ablation_results/summary.csv
+  - tabfm_ablation_results/predictions.csv
+  - tabfm_ablation_results/fold_r2.csv
+  - tabfm_ablation_results/summary.txt
+==================================================

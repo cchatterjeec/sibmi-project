@@ -1,0 +1,12 @@
+*.pyc
+__pycache__/
+*.ipynb_checkpoints/
+.DS_Store
+*.parquet
+*.csv
+*.log
+env/
+venv/
+*.h5
+*.pkl
+slurm-*.out

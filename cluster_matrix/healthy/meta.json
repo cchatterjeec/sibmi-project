@@ -1,0 +1,36 @@
+{
+  "study_group": "healthy",
+  "n": 747,
+  "method": "spectral (k-NN graph adjacency, RBF-weighted edges + normalized Laplacian + KMeans on top-k eigenvectors)",
+  "rbf_sigma": 0.9309,
+  "best_k": 2,
+  "silhouette_by_k": {
+    "2": 0.2514,
+    "3": 0.1959,
+    "4": 0.1643,
+    "5": 0.1757,
+    "6": 0.179
+  },
+  "pca_variance_explained": [
+    0.4198,
+    0.232,
+    0.1747
+  ],
+  "n_neighbors": 15,
+  "n_outliers_removed": 12,
+  "outlier_ids": [
+    1388,
+    1408,
+    1694,
+    4585,
+    4625,
+    7037,
+    7057,
+    7114,
+    7145,
+    7183,
+    7525,
+    7554
+  ],
+  "outlier_z_thresh": 4.0
+}

@@ -1,0 +1,114 @@
+Input Notebook:  tabfm_model.ipynb
+Output Notebook: tabfm_output.ipynb
+
+Executing:   0%|          | 0/4 [00:00<?, ?cell/s][IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+Executing notebook with kernel: tabfm
+Executing Cell 1---------------------------------------
+Hello! I'm working!
+
+Ending Cell 1------------------------------------------
+
+Executing:  25%|██▌       | 1/4 [00:15<00:47, 15.88s/cell]Executing Cell 2---------------------------------------
+Ending Cell 2------------------------------------------
+
+Executing:  50%|█████     | 2/4 [00:21<00:20, 10.08s/cell]Executing Cell 3---------------------------------------
+Features: ['age', 'pulse_vsorres, Heart Rate (bpm)', 'bmi_vsorres, BMI', 'import_hba1c, Hemoglobin A1c/Hemoglobin.total in ', 'import_albumin, Albumin [Mass/volume] in Serum or', 'import_a_g_ratio, Albumin/Globulin ratio', 'import_globulin_total, Globulin [Mass/volume] in ', 'import_protein_total, Protein [Mass/volume] in Se', 'import_c_peptide, C peptide [Mass/volume] in Seru', 'import_calcium, Calcium [Mass/volume] in Serum or', 'import_chloride, Chloride [Moles/volume] in Serum', 'import_sodium, Sodium [Moles/volume] in Serum or ', 'import_potassium, Potassium [Moles/volume] in Ser', 'import_carbon_dioxide_total, Carbon dioxide, tota', 'import_creatinine, Creatinine [Mass/volume] in Se', 'import_bun, Urea nitrogen [Mass/volume] in Serum ', 'import_buncreatinineratio, BUN/Creatinine ratio', 'import_urine_albumin, Albumin [Mass/volume] in Ur', 'import_urine_creatinine, Creatinine [Mass/volume]', 'import_alkaline_phosphatase, Alkaline phosphatase', 'import_alt_got, Alanine aminotransferase [Enzymat', 'import_ast_got, Aspartate aminotransferase [Enzym', 'import_bilirubin_total, Bilirubin.total [Mass/vol', 'import_crp_hs, C reactive protein [Mass/volume] i', 'import_nt_probnp, Natriuretic peptide.B prohormon', 'import_troponin_t, Troponin T.cardiac [Mass/volum', 'import_total_cholesterol, Cholesterol [Mass/volum', 'import_hdl_cholesterol, Cholesterol in HDL [Mass/', 'import_ldl_cholesterol, Cholesterol in LDL [Mass/', 'import_triglycerides, Triglyceride [Mass/volume] ', 'avg_daily_steps', 'num_days', 'avg_sleep_minutes', 'num_nights', 'avg_sleep_hours', 'cv_glucose', 'race', 'sex']
+
+/home/chc1596/.conda/envs/tabfm/lib/python3.11/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+
+
+Fetching 278 files:   0%|          | 0/278 [00:00<?, ?it/s]
+
+Fetching 278 files:  29%|██▉       | 82/278 [00:00<00:00, 803.63it/s]
+
+Fetching 278 files:  60%|██████    | 167/278 [00:00<00:00, 827.80it/s]
+
+Fetching 278 files:  97%|█████████▋| 270/278 [00:00<00:00, 918.90it/s]
+
+Fetching 278 files: 100%|██████████| 278/278 [00:00<00:00, 901.04it/s]
+
+WARNING:absl:CheckpointManagerOptions.read_only=True, setting save_interval_steps=0.
+
+WARNING:absl:CheckpointManagerOptions.read_only=True, setting create=False.
+
+WARNING:absl:Given directory is read only=/home/chc1596/.cache/huggingface/hub/models--google--tabfm-1.0.0-jax/snapshots/b144fa323b152f548e5ff7a10aec8f08bc68ce8d/regression/orbax
+
+
+==================================================
+Study Group: pre_diabetes_lifestyle_controlled
+==================================================
+
+
+TabFM
+  R-squared: 0.6979701037623974
+  MSE: 0.24630117692436604
+
+==================================================
+Study Group: healthy
+==================================================
+
+
+TabFM
+  R-squared: 0.8362218988638521
+  MSE: 0.17744801997598597
+
+==================================================
+Study Group: oral_medication_and_or_non_insulin_injectable_medication_controlled
+==================================================
+
+
+TabFM
+  R-squared: 0.8062180067331824
+  MSE: 0.28066090564151625
+
+==================================================
+Study Group: insulin_dependent
+==================================================
+
+
+TabFM
+  R-squared: 0.13203944879440088
+  MSE: 1.4602618200428468
+
+==================================================
+Summary
+==================================================
+                                                        n  tabfm_r2  \
+pre_diabetes_lifestyle_controlled                   549.0  0.697970   
+healthy                                             760.0  0.836222   
+oral_medication_and_or_non_insulin_injectable_m...  663.0  0.806218   
+insulin_dependent                                   246.0  0.132039   
+
+                                                    tabfm_mse  tabfm_train_r2  \
+pre_diabetes_lifestyle_controlled                    0.246301        0.958787   
+healthy                                              0.177448        0.978055   
+oral_medication_and_or_non_insulin_injectable_m...   0.280661        0.954984   
+insulin_dependent                                    1.460262        0.986518   
+
+                                                    tabfm_train_mse  
+pre_diabetes_lifestyle_controlled                          0.044121  
+healthy                                                    0.020845  
+oral_medication_and_or_non_insulin_injectable_m...         0.047549  
+insulin_dependent                                          0.015921  
+
+Prediction dataframe:
+   participant_id                        study_group  actual_insulin  \
+0            1029  pre_diabetes_lifestyle_controlled            0.24   
+1            1034  pre_diabetes_lifestyle_controlled            0.39   
+2            1038  pre_diabetes_lifestyle_controlled            0.29   
+3            1044  pre_diabetes_lifestyle_controlled            0.93   
+4            1049  pre_diabetes_lifestyle_controlled            0.98   
+
+   pred_insulin_tabfm  
+0            0.301517  
+1            0.325768  
+2            0.232809  
+3            1.058324  
+4            0.709728  
+
+Ending Cell 3------------------------------------------
+Executing:  75%|███████▌  | 3/4 [1:15:54<34:35, 2075.28s/cell]Executing Cell 4---------------------------------------
+<Figure size 1200x1200 with 4 Axes>
+Ending Cell 4------------------------------------------
+Executing: 100%|██████████| 4/4 [1:15:58<00:00, 1257.52s/cell]Executing: 100%|██████████| 4/4 [1:16:00<00:00, 1140.05s/cell]

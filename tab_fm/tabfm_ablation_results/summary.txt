@@ -1,0 +1,20 @@
+pre_diabetes_lifestyle_controlled  (n=549, n_train=439, n_test=110)
+  Forward train->test:        R2 = 0.6958 +/- 0.0779
+  Standard 5-fold CV (pooled): R2 = 0.8130 +/- 0.0259
+  Reverse 5-fold CV (pooled):  R2 = 0.7537 +/- 0.0149
+
+healthy  (n=759, n_train=607, n_test=152)
+  Forward train->test:        R2 = 0.8170 +/- 0.0446
+  Standard 5-fold CV (pooled): R2 = 0.7824 +/- 0.0374
+  Reverse 5-fold CV (pooled):  R2 = 0.7257 +/- 0.0160
+
+oral_medication_and_or_non_insulin_injectable_medication_controlled  (n=663, n_train=530, n_test=133)
+  Forward train->test:        R2 = 0.8028 +/- 0.0360
+  Standard 5-fold CV (pooled): R2 = 0.7345 +/- 0.0333
+  Reverse 5-fold CV (pooled):  R2 = 0.6117 +/- 0.0229
+
+insulin_dependent  (n=246, n_train=198, n_test=48)
+  Forward train->test:        R2 = 0.1202 +/- 0.1593
+  Standard 5-fold CV (pooled): R2 = 0.3119 +/- 0.0784
+  Reverse 5-fold CV (pooled):  R2 = 0.1859 +/- 0.0277
+

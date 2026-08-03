@@ -1,0 +1,83 @@
+/n/groups/patel/chandrima
+using /n/groups/patel/chandrima/code
+To sign in, use a web browser to open the page https://login.microsoft.com/device and enter the code F5D6J2JTP to authenticate.
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+
+  Visual Studio Code Tunnel v1.125.0
+
+  ➜  Tunnel:   o2tunnel
+  ➜  Open:  https://vscode.dev/tunnel/o2tunnel/n/groups/patel/chandrima
+
+[2026-07-07 17:51:59] info No agent host supervisor running; starting one in the background
+[2026-07-07 17:52:27] info [tunnels::connections::relay_tunnel_host] Opened new client on channel 2
+[2026-07-07 17:52:27] info [russh::server] wrote id
+[2026-07-07 17:52:28] info [russh::server] read other id
+[2026-07-07 17:52:28] info [russh::server] session is running
+[2026-07-07 17:52:28] info [rpc.0] Checking /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/log.txt and /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/pid.txt for a running server...
+[2026-07-07 17:52:28] info [rpc.0] Starting server...
+[2026-07-07 17:52:30] info [rpc.0] Server started
+[2026-07-07 17:52:53] info [rpc.0] Forwarding port 10681 (public=false)
+[2026-07-07 17:53:55] warn [rpc.0] error handling call: NoAttachedServerError(NoAttachedServerError)
+[2026-07-07 17:54:13] info [rpc.0] Forwarding port 34743 (public=false)
+[2026-07-07 19:04:03] info [rpc.0] Disposed of connection to running server.
+[2026-07-07 19:04:40] info [tunnels::connections::relay_tunnel_host] Opened new client on channel 3
+[2026-07-07 19:04:40] info [russh::server] wrote id
+[2026-07-07 19:04:40] info [russh::server] read other id
+[2026-07-07 19:04:40] info [russh::server] session is running
+[2026-07-07 19:04:41] info [rpc.2] Checking /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/log.txt and /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/pid.txt for a running server...
+[2026-07-07 19:04:41] info [rpc.2] Found running server (pid=486091)
+[2026-07-07 19:04:52] info [rpc.2] Forwarding port 36349 (public=false)
+[2026-07-07 19:30:49] info [rpc.2] Forwarding port 45023 (public=false)
+[2026-07-07 19:32:23] info [rpc.2] Forwarding port 43261 (public=false)
+[2026-07-07 19:41:23] info [rpc.2] Unforwarding port 43261
+[2026-07-07 19:48:50] info [rpc.2] Forwarding port 45347 (public=false)
+[2026-07-07 20:33:31] info [rpc.2] Forwarding port 42511 (public=false)
+[2026-07-07 20:48:03] info [rpc.2] Forwarding port 36349 (public=false)
+[2026-07-07 20:48:03] info [rpc.2] Forwarding port 45023 (public=false)
+[2026-07-07 20:48:03] info [rpc.2] Forwarding port 45347 (public=false)
+[2026-07-07 20:48:03] info [rpc.2] Forwarding port 42511 (public=false)
+[2026-07-07 20:48:06] info [rpc.2] Forwarding port 59223 (public=false)
+[2026-07-07 20:49:19] info [rpc.2] Forwarding port 36349 (public=false)
+[2026-07-07 20:49:19] info [rpc.2] Forwarding port 45023 (public=false)
+[2026-07-07 20:49:19] info [rpc.2] Forwarding port 45347 (public=false)
+[2026-07-07 20:49:19] info [rpc.2] Forwarding port 42511 (public=false)
+[2026-07-07 20:49:19] info [rpc.2] Forwarding port 59223 (public=false)
+[2026-07-07 20:49:22] info [rpc.2] Forwarding port 21873 (public=false)
+[2026-07-07 20:50:53] info [rpc.2] Forwarding port 45143 (public=false)
+[2026-07-07 21:06:43] info [rpc.2] Disposed of connection to running server.
+[2026-07-07 22:58:24] info [tunnels::connections::relay_tunnel_host] Opened new client on channel 4
+[2026-07-07 22:58:24] info [russh::server] wrote id
+[2026-07-07 22:58:24] info [russh::server] read other id
+[2026-07-07 22:58:24] info [russh::server] session is running
+[2026-07-07 22:58:25] info [rpc.3] Checking /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/log.txt and /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/pid.txt for a running server...
+[2026-07-07 22:58:25] info [rpc.3] Starting server...
+[2026-07-07 22:58:25] info [rpc.3] Server started
+[2026-07-07 22:58:32] info [rpc.3] Forwarding port 49006 (public=false)
+[2026-07-07 22:58:50] info [rpc.3] Forwarding port 36349 (public=false)
+[2026-07-07 22:58:50] info [rpc.3] Forwarding port 45023 (public=false)
+[2026-07-07 22:58:51] info [rpc.3] Forwarding port 45347 (public=false)
+[2026-07-07 22:58:51] info [rpc.3] Forwarding port 42511 (public=false)
+[2026-07-07 22:58:51] info [rpc.3] Forwarding port 59223 (public=false)
+[2026-07-07 22:58:51] warn [rpc.3] error handling call: NoAttachedServerError(NoAttachedServerError)
+[2026-07-07 22:58:51] info [rpc.3] Forwarding port 21873 (public=false)
+[2026-07-07 22:58:52] info [rpc.3] Forwarding port 41491 (public=false)
+[2026-07-07 22:58:56] info [rpc.3] Forwarding port 45923 (public=false)
+[2026-07-07 23:09:16] info [rpc.3] Forwarding port 39305 (public=false)
+[2026-07-07 23:25:11] warn [rpc.3] error handling call: NoAttachedServerError(NoAttachedServerError)
+[2026-07-07 23:25:17] info [rpc.3] Forwarding port 36349 (public=false)
+[2026-07-07 23:25:17] info [rpc.3] Forwarding port 45023 (public=false)
+[2026-07-07 23:25:17] info [rpc.3] Forwarding port 45347 (public=false)
+[2026-07-07 23:25:17] info [rpc.3] Forwarding port 42511 (public=false)
+[2026-07-07 23:25:17] info [rpc.3] Forwarding port 59223 (public=false)
+[2026-07-07 23:25:17] info [rpc.3] Forwarding port 21873 (public=false)
+[2026-07-07 23:25:20] info [rpc.3] Forwarding port 15262 (public=false)
+[2026-07-07 23:26:08] info [rpc.3] Forwarding port 34617 (public=false)
+[2026-07-07 23:27:24] warn [rpc.3] error handling call: NoAttachedServerError(NoAttachedServerError)
+[2026-07-07 23:30:52] info [rpc.3] Forwarding port 44341 (public=false)
+slurmstepd: error: *** JOB 47174673 ON compute-b-16-175 CANCELLED AT 2026-07-07T19:50:25 DUE TO TIME LIMIT ***

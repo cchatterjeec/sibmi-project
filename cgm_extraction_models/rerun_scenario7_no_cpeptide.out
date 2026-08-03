@@ -1,0 +1,39 @@
+============================================================
+Scenario: 7_add_glucose_hba1c
+  30 features: ['age', 'pulse_vsorres, Heart Rate (bpm)', 'bmi_vsorres, BMI', 'import_a_g_ratio, Albumin/Globulin ratio', 'import_globulin_total, Globulin [Mass/volume] in ', 'import_calcium, Calcium [Mass/volume] in Serum or', 'import_chloride, Chloride [Moles/volume] in Serum', 'import_sodium, Sodium [Moles/volume] in Serum or ', 'import_potassium, Potassium [Moles/volume] in Ser', 'import_carbon_dioxide_total, Carbon dioxide, tota', 'import_creatinine, Creatinine [Mass/volume] in Se', 'import_buncreatinineratio, BUN/Creatinine ratio', 'import_urine_albumin, Albumin [Mass/volume] in Ur', 'import_urine_creatinine, Creatinine [Mass/volume]', 'import_alkaline_phosphatase, Alkaline phosphatase', 'import_alt_got, Alanine aminotransferase [Enzymat', 'import_ast_got, Aspartate aminotransferase [Enzym', 'import_bilirubin_total, Bilirubin.total [Mass/vol', 'import_crp_hs, C reactive protein [Mass/volume] i', 'import_nt_probnp, Natriuretic peptide.B prohormon', 'import_troponin_t, Troponin T.cardiac [Mass/volum', 'import_hdl_cholesterol, Cholesterol in HDL [Mass/', 'import_ldl_cholesterol, Cholesterol in LDL [Mass/', 'import_triglycerides, Triglyceride [Mass/volume] ', 'avg_daily_steps', 'avg_sleep_minutes', 'race', 'sex', 'import_glucose, Glucose [Mass/volume] in Serum or', 'import_hba1c, Hemoglobin A1c/Hemoglobin.total in ']
+============================================================
+
+--- Study group: pre_diabetes_lifestyle_controlled ---
+  n = 549
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.0821 (SE=0.2733)  MSE=0.7485
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.7}  R2=0.3151 (SE=0.0692)  MSE=0.5585
+
+--- Study group: healthy ---
+  n = 759
+  ElasticNet  best_params={'enet__alpha': 0.01, 'enet__l1_ratio': 0.9}  R2=0.3460 (SE=0.0489)  MSE=1.2420
+  XGBoost     best_params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}  R2=0.3918 (SE=0.0383)  MSE=1.1550
+
+--- Study group: oral_medication_and_or_non_insulin_injectable_medication_controlled ---
+  n = 663
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 0.3}  R2=0.2409 (SE=0.0314)  MSE=1.0994
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.7}  R2=0.3417 (SE=0.0750)  MSE=0.9534
+
+--- Study group: insulin_dependent ---
+  n = 246
+  ElasticNet  best_params={'enet__alpha': 0.1, 'enet__l1_ratio': 1.0}  R2=0.0373 (SE=0.1250)  MSE=1.4940
+  XGBoost     best_params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 300, 'subsample': 0.7}  R2=0.1265 (SE=0.1515)  MSE=1.3555
+
+Wrote scenario outputs to results_no_cpeptide/7_add_glucose_hba1c/
+
+============================================================
+All scenarios complete. Comparison table:
+============================================================
+              scenario  ...   xgb_mse
+0  7_add_glucose_hba1c  ...  0.558546
+1  7_add_glucose_hba1c  ...  1.155026
+2  7_add_glucose_hba1c  ...  0.953431
+3  7_add_glucose_hba1c  ...  1.355465
+
+[4 rows x 9 columns]
+
+Full comparison written to results_no_cpeptide/ablation_comparison.csv

@@ -1,0 +1,13 @@
+{
+  "study_group": "pre_diabetes_lifestyle_controlled",
+  "n": 549,
+  "best_k": 3,
+  "ari_kmeans_vs_hier": 0.513,
+  "target_cluster_kmeans": 1,
+  "target_cluster_hier": 1,
+  "target_cluster_kmeans_n": 3,
+  "with_cgm_n": 539,
+  "with_cgm_best_k": 3,
+  "cca_n": 539,
+  "cca_cc1": 0.513
+}
