@@ -1,6 +1,63 @@
 /n/groups/patel/chandrima
 using /n/groups/patel/chandrima/code
-To sign in, use a web browser to open the page https://login.microsoft.com/device and enter the code ANJUSTJ26 to authenticate.
-To sign in, use a web browser to open the page https://login.microsoft.com/device and enter the code FH4WCLYTC to authenticate.
-To sign in, use a web browser to open the page https://login.microsoft.com/device and enter the code AMRSS9H8W to authenticate.
-To sign in, use a web browser to open the page https://login.microsoft.com/device and enter the code F57WRJNUK to authenticate.
+To sign in, use a web browser to open the page https://login.microsoft.com/device and enter the code ECR9N9QRD to authenticate.
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+
+  Visual Studio Code Tunnel v1.125.0
+
+  ➜  Tunnel:   o2tunnel
+  ➜  Open:  https://vscode.dev/tunnel/o2tunnel/n/groups/patel/chandrima/ai_readi
+
+[2026-08-06 15:46:54] info No agent host supervisor running; starting one in the background
+[2026-08-06 15:47:48] info [tunnels::connections::relay_tunnel_host] Opened new client on channel 2
+[2026-08-06 15:47:48] info [russh::server] wrote id
+[2026-08-06 15:47:48] info [russh::server] read other id
+[2026-08-06 15:47:48] info [russh::server] session is running
+[2026-08-06 15:47:49] info [rpc.0] Checking /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/log.txt and /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/pid.txt for a running server...
+[2026-08-06 15:47:49] info [rpc.0] Starting server...
+[2026-08-06 15:47:49] info [rpc.0] Server started
+[2026-08-06 15:47:58] info [rpc.0] Forwarding port 47225 (public=false)
+[2026-08-06 15:47:59] info [rpc.0] Forwarding port 44365 (public=false)
+[2026-08-06 15:47:59] info [rpc.0] Forwarding port 25 (public=false)
+[2026-08-06 15:47:59] info [rpc.0] Forwarding port 22 (public=false)
+[2026-08-06 15:48:03] info [rpc.0] Forwarding port 12322 (public=false)
+[2026-08-06 15:48:03] info [rpc.0] Forwarding port 39375 (public=false)
+[2026-08-06 16:24:08] info [rpc.0] Disposed of connection to running server.
+[2026-08-06 17:39:28] info [tunnels::connections::relay_tunnel_host] Opened new client on channel 3
+[2026-08-06 17:39:28] info [russh::server] wrote id
+[2026-08-06 17:39:29] info [russh::server] read other id
+[2026-08-06 17:39:29] info [russh::server] session is running
+[2026-08-06 17:39:29] info [rpc.2] Checking /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/log.txt and /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/pid.txt for a running server...
+[2026-08-06 17:39:29] info [rpc.2] Found running server (pid=871291)
+[2026-08-06 17:39:43] info [rpc.2] Forwarding port 12322 (public=false)
+[2026-08-06 17:39:43] info [rpc.2] Forwarding port 38865 (public=false)
+[2026-08-06 17:39:43] info [rpc.2] Forwarding port 39375 (public=false)
+[2026-08-06 17:39:44] info [rpc.2] Forwarding port 51768 (public=false)
+[2026-08-06 17:39:44] info [rpc.2] Forwarding port 25 (public=false)
+[2026-08-06 17:39:44] info [rpc.2] Forwarding port 22 (public=false)
+[2026-08-06 17:41:12] warn [rpc.2] error handling call: NoAttachedServerError(NoAttachedServerError)
+[2026-08-06 17:44:35] info [rpc.2] Unforwarding port 12322
+[2026-08-06 17:44:35] info [rpc.2] Unforwarding port 38865
+[2026-08-06 19:13:58] info [rpc.2] Disposed of connection to running server.
+[2026-08-06 19:22:40] info [tunnels::connections::relay_tunnel_host] Opened new client on channel 4
+[2026-08-06 19:22:40] info [russh::server] wrote id
+[2026-08-06 19:22:40] info [russh::server] read other id
+[2026-08-06 19:22:40] info [russh::server] session is running
+[2026-08-06 19:22:40] info [rpc.3] Checking /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/log.txt and /home/chc1596/.vscode/cli/servers/Stable-4fe60c8b1cdac1c4c174f2fb180d0d758272d713/pid.txt for a running server...
+[2026-08-06 19:22:40] info [rpc.3] Found running server (pid=871291)
+[2026-08-06 19:22:53] info [rpc.3] Forwarding port 39375 (public=false)
+[2026-08-06 19:22:54] info [rpc.3] Forwarding port 53866 (public=false)
+[2026-08-06 19:22:54] info [rpc.3] Forwarding port 55749 (public=false)
+[2026-08-06 19:22:54] info [rpc.3] Forwarding port 51768 (public=false)
+[2026-08-06 19:22:54] info [rpc.3] Forwarding port 25 (public=false)
+[2026-08-06 19:22:54] info [rpc.3] Forwarding port 22 (public=false)
+[2026-08-06 19:24:11] warn [rpc.3] error handling call: NoAttachedServerError(NoAttachedServerError)
+[2026-08-06 19:24:54] warn [rpc.3] error handling call: NoAttachedServerError(NoAttachedServerError)
+[2026-08-06 19:27:44] info [rpc.3] Unforwarding port 55749
+[2026-08-06 19:27:44] info [rpc.3] Unforwarding port 51768
